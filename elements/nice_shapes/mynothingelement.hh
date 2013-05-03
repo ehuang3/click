@@ -8,7 +8,7 @@ class MyNothingElement : public Element {
 public:
     MyNothingElement() { }
     ~MyNothingElement() { }
-    const char *class_name() const { return "MyNullElement"; }
+    const char *class_name() const { return "MyNothingElement"; }
     const char *port_count() const { return PORTS_1_1; }
     const char *processing() const { return PUSH; }
     void push(int port, Packet *p);

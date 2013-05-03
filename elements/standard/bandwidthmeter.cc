@@ -59,6 +59,9 @@ BandwidthMeter::configure(Vector<String> &conf, ErrorHandler *errh)
     vals[i] = (vals[i]<<_rate.scale()) / _rate.epoch_frequency();
   }
 
+  for(int i=0; i < conf.size(); i++)
+	  errh->warning("%s = %u\n", conf[i].c_str(), vals[i]);
+
   if (vals.size() == 1) {
     _meter1 = vals[0];
     _nmeters = 1;
